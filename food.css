@@ -1,0 +1,140 @@
+*{
+    font-family: "Poppins", sans-serif;
+    transform-style: preserve-3d;
+    margin: 0;
+    padding: 0;
+}
+
+  body {
+    display: grid;
+    background: linear-gradient(-45deg, rgb(228, 8, 92), rgb(255, 91, 173), rgb(247, 156, 224), rgb(219, 171, 219));
+    background-size: 3000% 3000%;
+    /*Animation for background*/
+    animation: gradient 10s ease-in-out infinite;
+}
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+    
+}
+
+ header {
+    height: 155px;
+    position: relative;
+  }
+ .nav-area{
+     float: right;
+     list-style: none;
+     margin-top: 30px;
+ }
+ .nav-area li{
+     display: inline-block;
+ }
+ .nav-area li a{
+     color: #fff;
+     text-decoration: none;
+     padding: 5px 20px;
+     font-family: poppins;
+     font-size: 16px;
+ }
+ .nav-area li:hover{
+    background: rgb(233, 30, 155);
+    color: #333;
+}
+
+.dropbtn {
+    padding: 5px 20px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(48, 209, 201, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: rgb(241, 26, 177);}
+.Foods {
+     position: relative;
+     column-count: 4;
+     padding: 20px;
+}
+.image {
+    display: inline-block;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+img    {
+    width: 100%;
+    transition: 0.25s ease-in-out;
+}
+.image:hover img{
+    transform: scale(4,4);
+}
+h1     {
+    position: absolute;
+    padding: 5px;
+    margin: 5px;
+    font-size: 25px;
+    background: #5c5c5c;
+    color:#ffffff;
+    border-radius: 5px;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.25 ease-in-out;
+}
+.image:hover h1{
+    opacity: 0.5;
+}
+@media screen and (max-witdh:1024px){
+    h1{
+        font-size: 20px;
+    }
+}
+@media screen and (max-witdh:768px){
+    .Foods{
+        column-count: 3;
+    }
+}
+@media screen and (max-witdh:325px){
+    .Foods{
+        column-count: 2;
+    }
+    h1{
+        font-size: 12px;
+    }
+}
+@media screen and (max-witdh:425px){
+    .Foods{
+        column-count: 1;
+    }
+    h1{
+        font-size: 15px;
+    }
+}
